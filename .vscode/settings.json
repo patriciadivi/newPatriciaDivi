@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "DEPENDENCES",
     "DEPENDÊNCIA",
-    "CONFIGURAÇÃO"
+    "CONFIGURAÇÃO",
+    "DESENVOLVIMENTO"
   ]
 }
