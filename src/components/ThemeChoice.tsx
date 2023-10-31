@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 
 import {useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -8,11 +8,6 @@ import { NavBar } from "./NavBar";
 export function ThemeChoice() {
   const [mounted, setMounted] = useState(false)
   const { theme, resolvedTheme, setTheme } = useTheme()
-  // const { theme, resolvedTheme, systemTheme, setTheme } = useTheme()
-  // const currentTheme = theme === 'system' ? systemTheme : theme;
-
-  // {(window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'ligth'}
-  // console.log('---> currentTheme', currentTheme);
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
@@ -36,7 +31,7 @@ export function ThemeChoice() {
             {
               theme && (
               resolvedTheme === 'dark' ? (
-                <span className="dark:text-white/90 flex gap-2  items-center justify-center "> 
+                <span className="dark:text-white/90 flex gap-2  items-center justify-center"> 
                   <Sun className="h-6 w-6 dark:text-orange-300 ml-4 mr-4" />
                 </span>
               ) : (
