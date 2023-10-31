@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import { AlignRight, FileCode2, Home, User, X } from 'lucide-react';
 
-
 export function NavBar() {
   const [ menu, toggleMenu ] = useState<boolean>(false)
 
@@ -16,8 +15,13 @@ export function NavBar() {
         {/* <div className="w-2 h-20 dark:bg-[#323232] bg-neutral-300 cursor-not-allowed"/> */}
         <div className="w-2 h-20 dark:bg-violet-700 bg-violet-600 cursor-not-allowed"/>
       <Link href='/' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:border-violet-600 hover:text-violet-600 dark:hover:text-violet-700">HOME</Link>
-      <Link href='/projects' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:border-violet-600 hover:text-violet-600 dark:hover:text-violet-700">PROJETOS</Link>
-      <Link href='/' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:border-violet-600 hover:text-violet-600 dark:hover:text-violet-700">CONTATO</Link>
+      <Link href='/projects' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:border-violet-600 hover:text-violet-600 dark:hover:text-violet-700">
+        PROJETOS
+      </Link>
+
+      <Link href='/contact' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:border-violet-600 hover:text-violet-600 dark:hover:text-violet-700">
+        CONTATO
+      </Link>
 
     </div>
 
@@ -50,7 +54,7 @@ export function NavBar() {
               PROJETOS
             </Link>
 
-            <Link href='/projects' className="flex flex-col items-center justify-center p-4 transition-all hover:text-violet-600 dark:hover:text-violet-700">
+            <Link href='/contact' className="flex flex-col items-center justify-center p-4 transition-all hover:text-violet-600 dark:hover:text-violet-700">
               <span><User className="mb-4" /></span>
               CONTATO
             </Link>
