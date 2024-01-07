@@ -50,7 +50,7 @@ export default function Page() {
           <section className="mb-8 w-11/12">
           {/* title | busca */}
           <div 
-            className="flex items-center justify-between pl-4 pr-4 sm:pl-0 sm:flex-col sm:items-start"
+            className="flex items-center justify-between pl-4 pr-4 sm:pl-0 sm:flex-col sm:items-certer  sm:mb-10"
           >
             <h1 className="font-bold sm:text-5xl text-4xl sm:mb-[-1px]">Entre em 
             <span className="text-[#00ADB5]"> contato</span></h1>
@@ -60,19 +60,19 @@ export default function Page() {
 
           {/* container card */}
           <div 
-            className="sm:flex sm:flex-row sm:flex-wrap sm:border sm:border-violet-500 sm:justify-around md:space-between md:items-center md:mx-auto gap-6 mt-3 border border-orange-600 xl:max-w-7xl"
+            className="sm:flex sm:flex-row sm:flex-wrap sm:justify-around md:space-between md:items-center md:mx-auto gap-6 mt-3 xl:max-w-7xl"
           >
               
             {/* container card */}
               <section 
-                className="bg-[#393E46] bg-opacity-50 flex flex-col items-center gap-2 p-4 rounded-xl sm:w-[368px]"
+                className="bg-[#C7C7C8] dark:bg-[#393E46] bg-opacity-50 flex flex-col items-center gap-2 p-4 rounded-xl sm:w-[468px]"
               >
    
                 <form 
                   onSubmit={handleSubmit(submitMessage)} 
                   className="w-full flex flex-col my-4"
                 >
-                  <label htmlFor="" className="font-semibold leading-tight">
+                  <label htmlFor="" className="font-semibold leading-tight text-[#00ADB5] sm:text-xl">
                     Nome
                   </label>
 
@@ -80,7 +80,7 @@ export default function Page() {
                     type="text"
                     id="name"
                     placeholder="Digite seu nome"
-                    className="p-4 rounded-lg my-3 bg-zinc-700 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:[#00ADB5] focus:ring-offset-2 focus:ring-offset-zinc-900"
+                    className="p-4 rounded-lg my-3  bg-zinc-300 text-zinc-900 placeholder:text-zinc-700 dark:bg-zinc-800 dark:text-white dark:placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:[#00ADB5] focus:ring-offset-2 focus:ring-offset-zinc-200 dark:focus:ring-offset-zinc-900"
                     {...register("name")}
                     // autoFocus
                     // value={title}
@@ -91,7 +91,7 @@ export default function Page() {
                     errors.name && <span>{errors.name.message}</span>
                   }
 
-                  <label htmlFor="" className="font-semibold leading-tight mt-4">
+                  <label htmlFor="" className="font-semibold leading-tight mt-4 text-[#00ADB5] sm:text-xl">
                     E-mail
                   </label>
 
@@ -99,7 +99,7 @@ export default function Page() {
                     type="email"
                     id="email"
                     placeholder="Digite sua e-mail"
-                    className="p-4 rounded-lg my-3 bg-zinc-700 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:[#00ADB5] focus:ring-offset-2 focus:ring-offset-zinc-900"
+                    className="p-4 rounded-lg my-3 bg-zinc-300 text-zinc-900 placeholder:text-zinc-700 dark:bg-zinc-800 dark:text-white dark:placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:[#00ADB5] focus:ring-offset-2 focus:ring-offset-zinc-200 dark:focus:ring-offset-zinc-900"
                     {...register("email")}
                     // autoFocus
                     // value={title}
@@ -110,7 +110,7 @@ export default function Page() {
                     errors.email && <span>{errors.email.message}</span>
                   }
 
-                  <label htmlFor="" className="font-semibold leading-tight mt-4">
+                  <label htmlFor="" className="font-semibold leading-tight mt-4 text-[#00ADB5] sm:text-xl">
                     Mensagem
                   </label>
 
@@ -118,7 +118,7 @@ export default function Page() {
                     // type="text"
                     id="message"
                     placeholder="Digite sua mensagem"
-                    className="p-4 rounded-lg my-3 h-36 bg-zinc-700 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:[#00ADB5] focus:ring-offset-2 focus:ring-offset-zinc-900"
+                    className="p-4 rounded-lg my-3 h-36  bg-zinc-300 text-zinc-900 placeholder:text-zinc-700 dark:bg-zinc-800 dark:text-white dark:placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:[#00ADB5] focus:ring-offset-2 focus:ring-offset-zinc-200 dark:focus:ring-offset-zinc-900"
                     {...register("message")}
                     // autoFocus
                     // value={title}

@@ -65,19 +65,20 @@ export function FilterTechnology({ list, gists }:Propslist) {
   const filteredGists = listGists?.map((repo) => repo.files )
   const filteredImages = filteredGists?.filter((gist, index) => {
     return Object.keys(gist).some((file)=>{
-      // const data = filteredNames.filter((nameImage) => ({
-      //   filename: `${file}.svg` === `${nameImage}.svg`
-      // }))
+      const data = filteredNames.filter((nameImage) => ({
+        filename: `${file}.svg` === `${nameImage}.svg`
+      }))
       // const { filename, raw_url } = file
       // const array = []
       // return array.push(filename, raw_url)
-      console.log('---> file', file)
+      // console.log('---> file', file)
+      console.log('---> data',  data)
       return (file === "newPatriciaDivi.svg") && file
     })
   })
-  console.log('----> filteredNames',filteredNames);
+  // console.log('----> filteredNames',filteredNames);
   console.log('----> gists', filteredGists);
-  console.log('----> images', filteredImages);
+  // console.log('----> images', filteredImages);
   
 
 
@@ -122,7 +123,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
               type="button" 
               className={`${(search === '' || search === 'all') 
               ? "bg-[#00ADB5] border-current" 
-              : "bg-[#393E46]"} bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow `}
+              : "bg-[#C7C7C8]"} bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow `}
               value='all'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -130,7 +131,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#393E46] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
               value='front-end'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -138,7 +139,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#393E46] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
               value='back-end'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -146,7 +147,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#393E46] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
               value='full-stack'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -172,7 +173,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
 
         {/* container card */}
         <div 
-          className="sm:flex sm:flex-row sm:flex-wrap sm:border sm:border-violet-500 sm:justify-around md:space-between md:items-center md:mx-auto gap-6 mt-11 xl:max-w-7xl"
+          className="sm:flex sm:flex-row sm:flex-wrap sm:justify-around md:space-between md:items-center md:mx-auto gap-6 mt-11 xl:max-w-7xl"
         >
             
           {/* container card */}
@@ -190,7 +191,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
               return (
               <div
               key={`${index}-${repo.name}`} 
-              className="mb-10 bg-[#393E46] bg-opacity-50 rounded-xl sm:min-h-[350px] sm:w-[368px] shadow-lg duration-300 dark:hover:brightness-50 hover:brightness-150 hover:scale-105"
+              className="mb-10 bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 rounded-xl sm:min-h-[350px] sm:w-[368px] shadow-lg duration-300 dark:hover:brightness-50 hover:neutral-150 hover:scale-105"
             >
 
               <Link   
@@ -199,7 +200,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
                 className="flex flex-col items-center gap-2 p-4"
               >
                     
-                <div className="flex items-center justify-end w-[102%] text-xs text-[#00ADB5]  sm:w-[104%]">
+                <div className="flex items-center justify-end w-[102%] text-xs text-[#00ADB5] font-semibold sm:w-[104%]">
                   <p>{date.toUpperCase()}</p>
                 </div>
 
@@ -228,11 +229,11 @@ export function FilterTechnology({ list, gists }:Propslist) {
 
                   {
                     (repo.description) ? (
-                      <p className="tracking-wider leading-6 text-white text-base text-left sm:text-left sm:text-sm"> 
+                      <p className="tracking-wider leading-6 text-zinc-800 dark:text-white text-base text-left sm:text-left sm:text-base"> 
                         { repo.description }
                       </p>
                      ) : (
-                      <p className="tracking-wider leading-6 text-white text-base text-left  border border-violet-600  sm:text-sm"> 
+                      <p className="tracking-wider leading-6 text-zinc-800 text-base text-left border sm:text-base"> 
                         Descrição ainda não preenchida
                       </p>
                      )
@@ -273,7 +274,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
 
             <button
               type="button"
-              className={`${(search === '' || search === 'all') && "bg-[#00ADB5]"} bg-[#393E46] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow`}
+              className={`${(search === '' || search === 'all') && "bg-[#00ADB5]"} bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow`}
               value='all'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -281,7 +282,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#393E46] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
               value='front-end'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -289,7 +290,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#393E46] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
               value='back-end'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -297,7 +298,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#393E46] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
               value='full-stack'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -323,7 +324,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
 
         {/* container card */}
         <div 
-          className="sm:flex sm:flex-row sm:flex-wrap sm:border sm:border-violet-500 sm:justify-around md:space-between md:items-center md:mx-auto gap-6 mt-11 xl:max-w-7xl"
+          className="sm:flex sm:flex-row sm:flex-wrap sm:justify-around md:space-between md:items-center md:mx-auto gap-6 mt-11 xl:max-w-7xl"
         >
             
           {/* container card */}
@@ -378,8 +379,6 @@ export function FilterTechnology({ list, gists }:Propslist) {
 
 
 
-
-
                       <span
                         key={`${repo.name}-${index}`}
                         className="flex items-center gap-1"
@@ -411,7 +410,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
                           { repo.description }
                         </p>
                       ) : (
-                        <p className="tracking-wider leading-6 text-white text-base text-left  border border-violet-600  sm:text-sm"> 
+                        <p className="tracking-wider leading-6 text-white text-base text-left border sm:text-sm"> 
                           Descrição ainda não preenchida
                         </p>
                       )
@@ -428,7 +427,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             ) :
             (
              <>
-               <p className="border">não tem conteúdo</p>
+               <p className="border font-semibold">não tem conteúdo</p>
              </>
             )
 
