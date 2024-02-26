@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, Suspense } from 'react'
 import { Inter } from 'next/font/google'
 import { Providers } from './Providers'
 import './globals.css'
@@ -19,9 +19,11 @@ export default function RootLayout({
   return (
       <html lang="pt-BR">
         <body suppressHydrationWarning={true} className={`${inter.className} `}>
+          <Suspense>
             <Providers>
               {children}
             </Providers>
+          </Suspense>
         </body>
       </html>
   )
