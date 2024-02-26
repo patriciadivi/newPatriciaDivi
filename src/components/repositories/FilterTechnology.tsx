@@ -18,6 +18,8 @@ import { GistImages } from "../GistImages";
   language: string;
   description: string;
   topics: string[];
+  releases: string[];
+  
 }
 
 type GistProps = {
@@ -63,22 +65,23 @@ export function FilterTechnology({ list, gists }:Propslist) {
 
   const filteredNames = listRepos?.map((repo) => repo.name )
   const filteredGists = listGists?.map((repo) => repo.files )
-  const filteredImages = filteredGists?.filter((gist, index) => {
-    return Object.keys(gist).some((file)=>{
-      const data = filteredNames.filter((nameImage) => ({
-        filename: `${file}.svg` === `${nameImage}.svg`
-      }))
-      // const { filename, raw_url } = file
-      // const array = []
-      // return array.push(filename, raw_url)
-      // console.log('---> file', file)
-      console.log('---> data',  data)
-      return (file === "newPatriciaDivi.svg") && file
-    })
-  })
+  // const filteredImages = filteredGists?.filter((gist, index) => {
+  //   return Object.keys(gist).some((file)=>{
+  //     // const data = filteredNames.filter((nameImage) => ({
+  //     //   filename: `${file}.svg` === `${nameImage}.svg`
+  //     // }))
+  //     // const { filename, raw_url } = file
+  //     // const array = []
+  //     // return array.push(filename, raw_url)
+  //     // console.log('---> file', file)
+      
+  //     return (file === "newPatriciaDivi.svg") && file
+  //   })
+  // })
   // console.log('----> filteredNames',filteredNames);
-  console.log('----> gists', filteredGists);
+  // console.log('----> gists', filteredGists);
   // console.log('----> images', filteredImages);
+  console.log('----> listRepos', listRepos);
   
 
 

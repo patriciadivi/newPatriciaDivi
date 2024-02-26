@@ -1,20 +1,14 @@
 // "use client"
 
-import dayjs from 'dayjs'
 import 'dayjs/locale/pt-br'
 
 // dayjs.updateLocale('pt-br')
 import { makeRequest } from "@/lib/api";
-// import { Repo } from "@/components/Repo";
-// import Image from "next/image";
-import Link from "next/link";
-import Image from "next/image";
 
 import Html from '@/images/html_5.svg'
 import JavaScript from '@/images/javascript.svg'
 import TypeScript from '@/images/typescript.svg'
 
-import { ValidateImage } from "@/components/ValidateImage";
 import { FilterTechnology } from "@/components/repositories/FilterTechnology";
 
 // type UserProps = {
@@ -56,6 +50,7 @@ type ReposProps = {
   language: string;
   description: string;
   topics: string[];
+  releases: string[];
 }
 
 export default async function Page() {
