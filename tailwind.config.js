@@ -16,6 +16,11 @@ module.exports = {
       //   'footer-texture': "url('/img/footer-texture.png')",
       // },
     },
+    keyframes: {
+      shimmer: {
+        '100%' : {transform: 'translateX(100%)'}
+      }
+    }
   },
   plugins: [],
 }
