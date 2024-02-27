@@ -15,7 +15,7 @@ export function Perfil() {
           width={200}
           height={200}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="rounded-full border border-green-500 m-2"
+          className="rounded-full m-2"
         />
       </div>
 
@@ -39,7 +39,7 @@ export function Perfil() {
     </p>
 
     <button type="button" className=" mt-4 w-[242px] h-[57px] flex gap-2 justify-center items-center dark:bg-[#323232] bg-neutral-300 ">
-      <Mail className="dark:text-violet-700 text-violet-600"/>
+      <Mail className="dark:text-[#00ADB5] text-[#00ADB5]"/>
       patricia.dvsp@gmail.com
     </button>
     </div>

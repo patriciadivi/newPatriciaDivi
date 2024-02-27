@@ -6,21 +6,21 @@ export function RedesSociais() {
         <button
           type="button"
          className="flex flex-col gap-2 items-center justify-center">
-          <Github className="dark:text-violet-700 text-violet-600"/>
+          <Github className="dark:text-[#00ADB5] text-[#00ADB5]"/>
           Github
         </button>
 
         <button
          type="button" 
          className="flex flex-col gap-2 items-center justify-center">
-          <Linkedin className="dark:text-violet-700 text-violet-600"/>
+          <Linkedin className="dark:text-[#00ADB5] text-[#00ADB5]"/>
           Linkedin
         </button>
 
         <button 
          type="button" 
          className="flex flex-col gap-2 items-center justify-center">
-          <Codepen className="dark:text-violet-700 text-violet-600"/>
+          <Codepen className="dark:text-[#00ADB5] text-[#00ADB5]"/>
           Codepen
         </button>
     </>
