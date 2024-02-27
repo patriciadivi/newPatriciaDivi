@@ -33,10 +33,10 @@ export function NavBar() {
       >
         {
           (menu === false) ? (
-          <AlignRight className="ml-4 duration-200 hover:text-violet-600 dark:hover:text-violet-700" />
+          <AlignRight className="ml-4 duration-200 hover:text-[#00ADB5]" />
           ) 
           : (
-            <X className="ml-4 duration-200 hover:text-violet-600 dark:hover:text-violet-700"/>
+            <X className="ml-4 duration-200 hover:text-[#00ADB5]"/>
           )
         }
       
@@ -44,17 +44,17 @@ export function NavBar() {
           (menu) && (
             <div className="absolute w-full h-[91%] left-0 flex flex-col items-center justify-center dark:bg-backgroundDark bg-white mt-6 transition-all">
 
-            <Link href='/' className="flex flex-col items-center justify-center p-4 transition-all hover:text-violet-600 dark:hover:text-violet-700">
+            <Link href='/' className="flex flex-col items-center justify-center p-4 transition-all hover:text-[#00ADB5] dark:hover:text-[#00ADB5]">
             <Home className="mb-4" />
               HOME
             </Link>  
             
-            <Link href='/projects' className="flex flex-col items-center justify-center p-4 transition-all hover:text-violet-600 dark:hover:text-violet-700">
+            <Link href='/projects' className="flex flex-col items-center justify-center p-4 transition-all hover:text-[#00ADB5] dark:hover:text-[#00ADB5]">
               <FileCode2 className="mb-4" />
               PROJETOS
             </Link>
 
-            <Link href='/contact' className="flex flex-col items-center justify-center p-4 transition-all hover:text-violet-600 dark:hover:text-violet-700">
+            <Link href='/contact' className="flex flex-col items-center justify-center p-4 transition-all hover:text-[#00ADB5] dark:hover:text-[#00ADB5]">
               <span><User className="mb-4" /></span>
               CONTATO
             </Link>
