@@ -13,13 +13,15 @@ export function NavBar() {
       {/* Menu Web */}
       <div className="max-sm:hidden flex items-center justify-center">
         {/* <div className="w-2 h-20 dark:bg-[#323232] bg-neutral-300 cursor-not-allowed"/> */}
-        <div className="w-2 h-20 dark:bg-violet-700 bg-violet-600 cursor-not-allowed"/>
-      <Link href='/' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:border-violet-600 hover:text-violet-600 dark:hover:text-violet-700">HOME</Link>
-      <Link href='/projects' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:border-violet-600 hover:text-violet-600 dark:hover:text-violet-700">
+        <div className="w-2 h-20 dark:bg-[#00ADB5] bg-[#00ADB5] cursor-not-allowed"/>
+      <Link href='/' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:font-semibold hover:text-[#00ADB5] dark:hover:text-[#00ADB5] dark:hover:texttext-[#00ADB5] hover:border-[#00ADB5]">
+        HOME
+      </Link>
+      <Link href='/projects' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:font-semibold hover:text-[#00ADB5] dark:hover:text-[#00ADB5] dark:hover:texttext-[#00ADB5] hover:border-[#00ADB5]">
         PROJETOS
       </Link>
 
-      <Link href='/contact' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:border-violet-600 hover:text-violet-600 dark:hover:text-violet-700">
+      <Link href='/contact' className="ml-8 mr-2 duration-150 hover:pb-4 hover:border-b-2 hover:font-semibold hover:text-[#00ADB5] dark:hover:text-[#00ADB5] dark:hover:texttext-[#00ADB5] hover:border-[#00ADB5]">
         CONTATO
       </Link>
 
