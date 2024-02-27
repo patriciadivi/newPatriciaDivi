@@ -134,7 +134,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#C7C7C8] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] dark:bg-[#393E46] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
               value='front-end'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -285,7 +285,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow dark:focus:bg-[#00ADB5]"
               value='front-end'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -293,7 +293,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow dark:focus:bg-[#00ADB5]"
               value='back-end'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -301,7 +301,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow dark:focus:bg-[#00ADB5]"
               value='full-stack'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
