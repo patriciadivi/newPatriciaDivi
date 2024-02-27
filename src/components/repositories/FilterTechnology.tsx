@@ -49,22 +49,22 @@ type FilesProps = {
 
   interface Propslist {
     list: ReposProps[]
-    gists: GistProps[]
+    // gists: GistProps[]
   }
 
 
-export function FilterTechnology({ list, gists }:Propslist) {
+export function FilterTechnology({ list }:Propslist) {
   const [search, setSearch] = useState('')
 
   const listRepos = list
-  const listGists = gists
+  // const listGists = gists
 
   const filteredRepos = (!search || search !== 'All') 
   ? listRepos.filter((repo) => repo.topics.includes(search) )
   : [];
 
   const filteredNames = listRepos?.map((repo) => repo.name )
-  const filteredGists = listGists?.map((repo) => repo.files )
+  // const filteredGists = listGists?.map((repo) => repo.files )
   // const filteredImages = filteredGists?.filter((gist, index) => {
   //   return Object.keys(gist).some((file)=>{
   //     // const data = filteredNames.filter((nameImage) => ({
@@ -81,7 +81,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
   // console.log('----> filteredNames',filteredNames);
   // console.log('----> gists', filteredGists);
   // console.log('----> images', filteredImages);
-  console.log('----> listRepos', listRepos);
+  // console.log('----> listRepos', listRepos);
   
 
 
@@ -98,7 +98,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSearch(event.target.value.toLowerCase())
-    console.log("Selected Value:", event.target.value.toLowerCase());
+    // console.log("Selected Value:", event.target.value.toLowerCase());
   }
   
   // console.log('---> renderizei', search)
@@ -134,7 +134,7 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#C7C7C8] dark:bg-[#393E46] bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow"
+              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow dark:focus:bg-[#00ADB5]"
               value='front-end'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >
@@ -301,7 +301,8 @@ export function FilterTechnology({ list, gists }:Propslist) {
             </button>
             
             <button 
-              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow dark:focus:bg-[#00ADB5]"
+              className="bg-[#C7C7C8] bg-opacity-50 dark:bg-[#393E46] dark:bg-opacity-50 py-3 px-9 rounded-3xl my-4 border border-transparent focus:bg-[#00ADB5] focus:border focus:border-current transition-shadow dark:focus:bg-[#00ADB5]
+              "
               value='full-stack'
               onClick={ ({currentTarget: { value }}) => setSearch(value)}
             >

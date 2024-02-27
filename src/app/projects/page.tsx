@@ -10,6 +10,7 @@ import JavaScript from '@/images/javascript.svg'
 import TypeScript from '@/images/typescript.svg'
 
 import { FilterTechnology } from "@/components/repositories/FilterTechnology";
+import { ProjectComingSoon } from '@/components/ProjectComingSoon';
 
 // type UserProps = {
 //   avatar_url: string;
@@ -55,7 +56,7 @@ type ReposProps = {
 
 export default async function Page() {
   // const responseUser: UserProps = await makeRequest('patriciadivi', 'get')
-  const gists: GistProps[] = await makeRequest('patriciadivi/gists', 'get')
+  // const gists: GistProps[] = await makeRequest('patriciadivi/gists', 'get')
   const repos: ReposProps[] = await makeRequest('patriciadivi/repos', 'get')
 
   // const user = [responseUser]
@@ -65,10 +66,11 @@ export default async function Page() {
   return (
     <main className="flex flex-col items-center">
 
-      <FilterTechnology list={ repos } gists={ gists } />
+      {/* <FilterTechnology list={ repos } gists={ gists } /> */}
+      {/* <FilterTechnology list={ repos } />  */}
       
       {/* <pre className="text-left ml-auto mr-auto pl-4 text-xs">{JSON.stringify(repos, null, 2)}</pre> */}
-
+      <ProjectComingSoon />
     </main>
   );
 }

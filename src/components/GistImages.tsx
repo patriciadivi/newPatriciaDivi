@@ -241,7 +241,7 @@ export function GistImages({nameGist}: NameGistProps) {
   async function handleFilterFiles() {
     // const files = await gistElement?.filter((element:any) => (element.files) && element)
     // setTest(files)
-    console.log('----> gistElement', gistElement)
+    // console.log('----> gistElement', gistElement)
   }
 
   async function fetchGistElement() {
