@@ -70,7 +70,19 @@ export default async function Page() {
       {/* <FilterTechnology list={ repos } />  */}
       
       {/* <pre className="text-left ml-auto mr-auto pl-4 text-xs">{JSON.stringify(repos, null, 2)}</pre> */}
-      <ProjectComingSoon />
+      <section className="mb-8 w-11/12">
+        {/* title | busca */}
+        <div 
+          className="flex items-center justify-center sm:pl-0 sm:flex-col sm:items-start"
+        >
+          <h1 
+            className="font-bold sm:text-5xl max-sm:text-5xl text-3xl mr-4 sm:mb-[-1px]"
+          > Meus 
+            <span className="text-[#00ADB5]"> Projetos</span>
+          </h1>
+        </div>
+        <ProjectComingSoon />
+      </section>
     </main>
   );
 }
